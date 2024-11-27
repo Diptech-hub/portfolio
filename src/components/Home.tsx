@@ -1,6 +1,6 @@
 import React from "react";
 import { PiArrowCircleUpRight } from "react-icons/pi";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import "../style/home.css";
 
 const Home: React.FC = () => {
@@ -42,9 +42,17 @@ const Home: React.FC = () => {
         </p>
       </div>
       <div className="connect">
-        <Link to="/about"><button>Explore <PiArrowCircleUpRight /></button></Link>
-        <button>Let's talk <PiArrowCircleUpRight /></button>
+        <Link to="/about">
+          <button>
+            Explore <PiArrowCircleUpRight />
+          </button>
+        </Link>
+        <button>
+          Let's talk <PiArrowCircleUpRight />
+        </button>
       </div>
+      <body>
+      </body>
     </div>
   );
 };

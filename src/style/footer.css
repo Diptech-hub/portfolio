@@ -1,22 +1,23 @@
-.foot{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    opacity: 0.85;
-    font-size: 16px;
-    gap: 20px;
-    padding: 20px;
-    width: 100%;
-    /* position: fixed; 
-    bottom: 0; 
-    left: 0; */
-    background-color: inherit;
-    color: inherit;
+.foot {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  opacity: 0.85;
+  font-size: 16px;
+  gap: 20px;
+  padding: 8px;
+  width: 100%;
+  background-color: inherit;
+  color: inherit;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
 }
 
-.foot a{
-    text-decoration: none;
-    display: flex;
+.foot a {
+  text-decoration: none;
+  display: flex;
   align-items: center;
   gap: 5px;
   color: inherit;
@@ -24,5 +25,5 @@
 }
 
 .foot a:hover {
-    opacity: 1;
+  opacity: 1;
 }

@@ -69,6 +69,10 @@
     font-size: 16px; 
 }
 
+.projectlink svg:hover{
+    color: #5D8AA8;
+}
+
 .others{
     margin: 24px 0;
     font-size: 24px;
@@ -79,4 +83,8 @@
 
 .others svg {
     font-size: 24px;
+}
+
+.others svg:hover{
+    color: #5D8AA8;
 }

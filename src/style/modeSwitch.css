@@ -1,11 +1,15 @@
 body.light-mode {
-  background-color: #F5F5F5;
+  /* background-color: #F5F5F5; */
   color: #000000;
   transition: all 0.3s ease-in-out;
+  background: linear-gradient(45deg, #f5f5f5, #e0e0e0, #f5f5f5);
+  animation: gradientLight 8s ease infinite;
 }
 
 body.dark-mode {
-  background-color: #181818;
+  /* background-color: #181818; */
+  background: linear-gradient(120deg, #181818, #202020);
+  animation: gradientDark 6s ease infinite;
   color: #ffffff;
   transition: all 0.3s ease-in-out;
 }
@@ -14,7 +18,7 @@ body.dark-mode {
   padding: 10px 20px;
   font-size: 1.2rem;
   cursor: pointer;
-  background-color: #007bff;
+  background-color: #5d8aa8;
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -31,4 +35,28 @@ body.dark-mode {
 .icon {
   width: 20px;
   height: 20px;
+}
+
+@keyframes gradientDark {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradientLight {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

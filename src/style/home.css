@@ -5,33 +5,35 @@
 }
 
 .heading h1{
-    font-size: 64px;
+    font-size: 72px;
     font-weight: bolder;
+    margin-top: 78px;
 }
 
 .heading p{
-    font-size: 24px;
+    font-size: 32px;
     opacity: 0.75;
 }
 
 .greet p{
-    font-size: 16px;
+    font-size: 24px;
     opacity: 1;
     margin-top: 48px;
-    letter-spacing: 4px;
 }
 
 .connect {
     display: flex;
     gap: 16px; 
-    margin-top: 24px;
+    margin: 40px 0 32px;
 }
 
 .connect button {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 16px;
+    background-color: #5D8AA8;
+    color: inherit;
+    padding: 8px;
     font-size: 16px;
     font-weight: bold;
     border: none;
@@ -43,3 +45,4 @@
 .connect button svg {
     font-size: 24px; /* Makes the icons bigger */
 }
+
