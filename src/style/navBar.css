@@ -1,0 +1,12 @@
+.navBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* background-color: inherit;
+    position: sticky; */
+}
+
+.navBar p{
+    font-size: 16px;
+    font-weight: bolder;
+}

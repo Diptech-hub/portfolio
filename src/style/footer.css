@@ -1,0 +1,28 @@
+.foot{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    opacity: 0.85;
+    font-size: 16px;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    /* position: fixed; 
+    bottom: 0; 
+    left: 0; */
+    background-color: inherit;
+    color: inherit;
+}
+
+.foot a{
+    text-decoration: none;
+    display: flex;
+  align-items: center;
+  gap: 5px;
+  color: inherit;
+  opacity: 0.6;
+}
+
+.foot a:hover {
+    opacity: 1;
+}
