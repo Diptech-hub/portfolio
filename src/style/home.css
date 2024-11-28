@@ -43,6 +43,41 @@
 }
 
 .connect button svg {
-    font-size: 24px; /* Makes the icons bigger */
+    font-size: 24px;
 }
 
+@media (max-width: 768px) {
+    .heading{
+        margin-top: 72px;
+    }
+
+    .heading h1{
+        font-size: 56px;
+        margin-top: 64px;
+        line-height: 64px;
+        text-align: center;
+    }
+
+    .heading p{
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .greet p{
+        font-size: 16px;
+        text-align: center;
+        line-height: 36px;
+    }
+
+    .connect {
+        flex-direction: row; 
+        gap: 24px; 
+        justify-content: center;
+        margin-top: 64px;
+      }
+    
+      .connect button {
+        text-align: center; 
+        padding: 12px;
+      }
+  }
