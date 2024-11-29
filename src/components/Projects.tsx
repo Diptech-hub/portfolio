@@ -4,6 +4,7 @@ import Header from "./header";
 import { FaEye } from "react-icons/fa";
 import { LuCode2 } from "react-icons/lu";
 import { MdOutlineArrowOutward } from "react-icons/md";
+import Transition from "./transition";
 
 interface ProjectList {
   id: Key | null | undefined;
@@ -98,4 +99,6 @@ const Project: React.FC = () => {
   );
 };
 
-export default Project;
+const ProjectWithTransition = () => <Transition OgComponent={Project} />;
+
+export default ProjectWithTransition;
