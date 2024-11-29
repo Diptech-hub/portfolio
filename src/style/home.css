@@ -48,11 +48,11 @@
 
 @media (max-width: 768px) {
     .heading{
-        margin-top: 72px;
+        margin-top: 96px;
     }
 
     .heading h1{
-        font-size: 56px;
+        font-size: 54px;
         margin-top: 64px;
         line-height: 64px;
         text-align: center;

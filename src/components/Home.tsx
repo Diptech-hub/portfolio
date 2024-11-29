@@ -1,9 +1,9 @@
-import React from "react";
 import { PiArrowCircleUpRight } from "react-icons/pi";
 import { Link } from "react-router-dom";
 import "../style/home.css";
 
 const Home: React.FC = () => {
+
   const greeting = () => {
     const now = new Date();
     const hours = now.getHours();
@@ -33,6 +33,7 @@ const Home: React.FC = () => {
   const { time, day } = greeting();
 
   return (
+    <>
     <div className="heading">
       <h1>Oladipupo Babayemi</h1>
       <p>Front-End Developer</p>
@@ -54,6 +55,7 @@ const Home: React.FC = () => {
       <body>
       </body>
     </div>
+    </>
   );
 };
 

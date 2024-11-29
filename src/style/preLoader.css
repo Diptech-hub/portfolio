@@ -1,0 +1,14 @@
+.preloader {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+    background-color: #202020; 
+    color: #ffffff;
+    font-size: 32px; 
+    font-weight: bold;
+    overflow: hidden; 
+    margin: -40px -80px; 
+    padding: 0;
+    box-sizing: border-box; 
+}
