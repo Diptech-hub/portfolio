@@ -7,7 +7,7 @@
 .heading h1{
     font-size: 72px;
     font-weight: bolder;
-    margin-top: 78px;
+    margin-top: 48px;
 }
 
 .heading p{
@@ -18,7 +18,7 @@
 .greet p{
     font-size: 24px;
     opacity: 1;
-    margin-top: 48px;
+    margin-top: 78px;
 }
 
 .connect {
@@ -32,7 +32,7 @@
     align-items: center;
     justify-content: center;
     background-color: #5D8AA8;
-    color: inherit;
+    color: #ffffff;
     padding: 8px;
     font-size: 16px;
     font-weight: bold;
@@ -40,11 +40,17 @@
     border-radius: 8px;
     cursor: pointer;
     gap: 8px;
+    transition: transform 0.3s ease;
 }
 
 .connect button svg {
     font-size: 24px;
 }
+
+.connect button:hover {
+    transform: scale(1.05);
+  }
+
 
 @media (max-width: 768px) {
     .heading{
@@ -53,9 +59,9 @@
 
     .heading h1{
         font-size: 54px;
-        margin-top: 64px;
         line-height: 64px;
         text-align: center;
+        margin-top: 0;
     }
 
     .heading p{
@@ -67,6 +73,7 @@
         font-size: 16px;
         text-align: center;
         line-height: 36px;
+        margin-top: 64px;
     }
 
     .connect {

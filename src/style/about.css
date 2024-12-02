@@ -1,5 +1,5 @@
 .about{
-    margin: 72px 0;
+    margin: 96px 0;
 }
 
 .about h1{
@@ -16,3 +16,18 @@
 .about p span{
     font-weight: bold;
 }
+
+@media (max-width: 768px) {
+    .about {
+      margin: 96px 0;
+    }
+  
+    .about h1 {
+      font-size: 24px;
+    }
+  
+    .about p {
+      font-size: 14px;
+    }
+  }
+  

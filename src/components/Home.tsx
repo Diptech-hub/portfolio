@@ -1,9 +1,10 @@
+import { motion } from "framer-motion";
+import NavBar from "../components/NavBar";
 import { PiArrowCircleUpRight } from "react-icons/pi";
 import { Link } from "react-router-dom";
 import "../style/home.css";
 
 const Home: React.FC = () => {
-
   const greeting = () => {
     const now = new Date();
     const hours = now.getHours();
@@ -34,27 +35,54 @@ const Home: React.FC = () => {
 
   return (
     <>
-    <div className="heading">
-      <h1>Oladipupo Babayemi</h1>
-      <p>Front-End Developer</p>
-      <div className="greet">
-        <p>
-          Good {time}, Happy {day} 😉
-        </p>
-      </div>
-      <div className="connect">
-        <Link to="/about">
+      <NavBar />
+      <motion.div
+        className="heading"
+        initial={{ opacity: 0, y: 50 }} // Initial state
+        animate={{ opacity: 1, y: 0 }} // Final state
+        transition={{ duration: 0.8, ease: "easeInOut" }} // Smooth transition
+      >
+        <motion.div
+          className="greet"
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.5, duration: 0.8, ease: "easeInOut" }}
+        >
+          <p>
+            Hey, Good {time}, Happy {day} 😉
+          </p>
+        </motion.div>
+        <motion.h1
+          initial={{ scale: 0.9, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 0.7, duration: 0.8, ease: "easeInOut" }}
+        >
+          Oladipupo Babayemi
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.9, duration: 0.8, ease: "easeInOut" }}
+        >
+          A Front-End Developer
+        </motion.p>
+
+        <motion.div
+          className="connect"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.2, duration: 0.8, ease: "easeInOut" }}
+        >
+          <Link to="/about">
+            <button>
+              Explore <PiArrowCircleUpRight />
+            </button>
+          </Link>
           <button>
-            Explore <PiArrowCircleUpRight />
+            Let's talk <PiArrowCircleUpRight />
           </button>
-        </Link>
-        <button>
-          Let's talk <PiArrowCircleUpRight />
-        </button>
-      </div>
-      <body>
-      </body>
-    </div>
+        </motion.div>
+      </motion.div>
     </>
   );
 };

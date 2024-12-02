@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { Key } from "react";
 import "../style/project.css";
 import Header from "./header";
@@ -27,7 +28,7 @@ const projects: ProjectList[] = [
   {
     id: 2,
     name: "CareFinder",
-    str1: "A web platform desinged to help users locate healthcare providers within their geographical region",
+    str1: "A web platform designed to help users locate healthcare providers within their geographical region",
     str2: "REACTJS + TYPESCRIPT + FIRESTORE + TailwindCSS",
     link1: "https://github.com/Diptech-hub/careFinder/",
     link2: "https://carefinder-health.vercel.app/",
@@ -35,10 +36,10 @@ const projects: ProjectList[] = [
   {
     id: 3,
     name: "Socials",
-    str1: "A web platform desinged to fetch X public metrics and display it in a graphical way",
+    str1: "A web platform designed to fetch X public metrics and display it in a graphical way",
     str2: "REACTJS + TYPESCRIPT + TailwindCSS + ChartJS",
     link1: "https://github.com/Diptech-hub/socials/",
-    link2: "",
+    link2: "https://github.com/Diptech-hub/socials/",
   },
   {
     id: 4,
@@ -54,47 +55,95 @@ const Project: React.FC = () => {
   return (
     <div>
       <Header />
-      <div className="project">
-        <h1>Projects</h1>
-        <p>Some notable projects I've built or contributed to include:</p>
-        <div className="projectList">
+      <motion.div
+        className="project"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <motion.h1
+          initial={{ y: -50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
+          Projects
+        </motion.h1>
+        <motion.p
+          initial={{ y: -50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+        >
+          Some notable projects I've built include:
+        </motion.p>
+        <motion.div
+          className="projectList"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: {
+                delayChildren: 0.6,
+                staggerChildren: 0.3,
+              },
+            },
+          }}
+        >
           <ul>
             {projects.map((project) => (
-              <li key={project.id}>
-                <p>{project.name}</p>
-                <p>{project.str1}</p>
-                <p>{project.str2}</p>
-                <div className="projectlink">
-                  <a
-                    href={project.link1}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <LuCode2 />
-                    See code
-                  </a>
-                  <a
+              <motion.li
+              key={project.id}
+              whileHover={{ translateY: -10, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)" }}
+              whileTap={{ scale: 0.98 }}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 },
+              }}
+            >
+              <p>{project.name}</p>
+              <p>{project.str1}</p>
+              <p>{project.str2}</p>
+              <div className="projectlink">
+                <motion.a
+                  href={project.link1}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1, color: "#5D8AA8" }}
+                >
+                  <LuCode2 />
+                  See code
+                </motion.a>
+                {project.link2 && (
+                  <motion.a
                     href={project.link2}
                     target="_blank"
                     rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1, color: "#5D8AA8" }}
                   >
                     <FaEye />
                     See live
-                  </a>
-                </div>
-              </li>
+                  </motion.a>
+                )}
+              </div>
+            </motion.li>
             ))}
           </ul>
-        </div>
-        <a
+        </motion.div>
+        <motion.a
           href="github.com/Diptech-hub/"
           target="_blank"
           rel="noopener noreferrer"
           className="others"
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 1 }}
+          whileHover={{ scale: 1.1, color: "#5D8AA8" }}
         >
           Others <MdOutlineArrowOutward />
-        </a>
-      </div>
+        </motion.a>
+      </motion.div>
     </div>
   );
 };

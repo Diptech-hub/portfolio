@@ -2,6 +2,8 @@ body{
   padding: 0;
   margin: 40px 80px;
   font-family: "Poppins", sans-serif;
+  background: linear-gradient(120deg, #0C0C0C, #100D08);
+  color: #ffffff;
 }
 
 .slide-in{

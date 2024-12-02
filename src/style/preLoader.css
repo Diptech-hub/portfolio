@@ -3,7 +3,7 @@
     justify-content: center; 
     align-items: center; 
     height: 100vh;
-    background-color: #202020; 
+    background: linear-gradient(120deg, #0C0C0C, #100D08);
     color: #ffffff;
     font-size: 32px; 
     font-weight: bold;

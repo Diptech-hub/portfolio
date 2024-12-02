@@ -4,6 +4,9 @@ import "../style/header.css";
 const Header: React.FC = () => {
   return (
     <div className="head">
+      <Link to="/" className="headLink">
+        Home
+      </Link>
       <Link to="/about" className="headLink">
         About
       </Link>
