@@ -1,6 +1,9 @@
 .heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   line-height: 16px;
-  margin-top: 64px;
   height: 100%;
 }
 
@@ -9,16 +12,6 @@
   font-weight: bolder;
   margin-top: 48px;
 }
-
-/* .heading h1::after {
-    content: "";
-    display: block;
-    width: 240px;
-    height: 4px;
-    margin: 24px auto;
-    background-color: #1a73e8;
-    border-radius: 2px;
-  } */
 
 .heading p {
   font-size: 24px;
@@ -66,9 +59,10 @@
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .heading {
-    margin-top: 96px;
+    margin-top: 48px;
+    height: auto;
   }
 
   .heading h1 {
@@ -87,14 +81,14 @@
     font-size: 14px;
     text-align: center;
     line-height: 36px;
-    margin-top: 64px;
+    margin-top: 32px;
   }
 
   .connect {
     flex-direction: row;
     gap: 24px;
     justify-content: center;
-    margin-top: 64px;
+    margin-top: 36px;
   }
 
   .connect button {
