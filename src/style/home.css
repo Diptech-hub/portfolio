@@ -10,6 +10,16 @@
   margin-top: 48px;
 }
 
+/* .heading h1::after {
+    content: "";
+    display: block;
+    width: 240px;
+    height: 4px;
+    margin: 24px auto;
+    background-color: #1a73e8;
+    border-radius: 2px;
+  } */
+
 .heading p {
   font-size: 24px;
 }
@@ -30,7 +40,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #5d8aa8;
+  background-color: #1a73e8;
   color: #ffffff;
   padding: 8px;
   font-size: 16px;
@@ -40,6 +50,7 @@
   cursor: pointer;
   gap: 8px;
   transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .connect button svg {
@@ -47,11 +58,12 @@
 }
 
 .connect button:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.connect a{
-    text-decoration: none;
+.connect a {
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {

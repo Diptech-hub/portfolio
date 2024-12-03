@@ -1,10 +1,10 @@
-.navBar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.navBar p{
-    font-size: 16px;
-    font-weight: bolder;
+.navBar p {
+  font-size: 16px;
+  font-weight: bolder;
 }

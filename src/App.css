@@ -1,34 +1,47 @@
-body{
+body {
   padding: 0;
   margin: 40px 80px;
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(120deg, #0C0C0C, #100D08);
+  background: linear-gradient(120deg, #0c0c0c, #100d08);
+  background-size: 200% 200%;
+  animation: gradient-shift 6s ease infinite;
   color: #ffffff;
 }
 
-
-.slide-in{
+.slide-in {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: #5d8aa8;
+  background-color: #1a73e8;
   transform-origin: bottom;
 }
 
-.slide-out{
+.slide-out {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: #5d8aa8;
+  background-color: #1a73e8;
   transform-origin: top;
 }
 
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 @media (max-width: 768px) {
-  body{
+  body {
     margin: 20px 40px;
   }
 }

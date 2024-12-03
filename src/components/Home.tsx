@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import NavBar from "../components/NavBar";
 import { PiArrowCircleUpRight } from "react-icons/pi";
+import { SiMinutemailer } from "react-icons/si";
 import { Link } from "react-router-dom";
 import "../style/home.css";
 
@@ -80,7 +81,7 @@ const Home: React.FC = () => {
           </Link>
           <a href="mailto:oladipupobabayemi@gmail.com">
             <button>
-              Let's talk <PiArrowCircleUpRight />
+              Let's talk <SiMinutemailer />
             </button>
           </a>
         </motion.div>

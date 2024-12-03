@@ -31,7 +31,7 @@ a {
 
 .headLink:hover,
 a:hover {
-  color: #5d8aa8;
+  color: #1a73e8;
 }
 
 .mobileheader {
@@ -96,7 +96,7 @@ a:hover {
   }
 
   .mobilebody a:hover {
-    color: #5d8aa8;
+    color: #1a73e8;
   }
 
   @keyframes slideDown {

@@ -1,46 +1,82 @@
+.footer-container {
+  position: fixed;
+  bottom: 48px;
+  right: 24px;
+  display: flex;
+  flex-direction: column-reverse; /* Reverses the order to place the button below the links */
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.toggle-button {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  z-index: 10;
+}
+
+.toggle-button:hover {
+  transform: scale(1.1);
+  background-color: #155bb5;
+}
+
 .foot {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center; 
-    opacity: 0.85;
-    font-size: 16px;
-    gap: 16px; 
-    padding: 8px 16px; 
-    width: 100%;
-    background-color: inherit;
-    color: inherit;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 100;
-  }
-  
-  .foot a {
-    text-decoration: none;
-    display: flex;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px); /* Starts the links slightly below */
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  z-index: 9; /* Ensures links are above the button when expanded */
+}
+
+.foot.expanded {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-30px); /* Moves the links above the button */
+}
+
+.foot a {
+  font-size: 16px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  font-weight: bold;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, color 0.3s ease;
+  background-color: #181818;
+  padding: 12px;
+  border-radius: 50%;
+}
+
+.foot a:hover {
+  opacity: 1;
+  color: #155bb5;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
     align-items: center;
-    gap: 8px; 
-    color: inherit;
-    opacity: 0.6;
-    transition: opacity 0.3s ease; 
   }
-  
-  .foot a:hover {
+
+  .toggle-button {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
+  .foot a {
+    font-size: 16px;
+    gap: 6px;
     opacity: 1;
   }
-  
-  @media (max-width: 768px) {
-    .foot {
-      flex-direction: row; 
-      gap: 12px;
-      padding: 16px 0; 
-      justify-content: center;
-    }
-  
-    .foot a {
-      font-size: 14px; 
-      gap: 6px; 
-    }
-  }
-  
+}
