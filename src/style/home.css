@@ -1,90 +1,92 @@
-.heading{
-    line-height: 16px;
-    margin-top: 64px;
-    height: 100%;
+.heading {
+  line-height: 16px;
+  margin-top: 64px;
+  height: 100%;
 }
 
-.heading h1{
-    font-size: 72px;
-    font-weight: bolder;
-    margin-top: 48px;
+.heading h1 {
+  font-size: 72px;
+  font-weight: bolder;
+  margin-top: 48px;
 }
 
-.heading p{
-    font-size: 32px;
-    opacity: 0.75;
+.heading p {
+  font-size: 24px;
 }
 
-.greet p{
-    font-size: 24px;
-    opacity: 1;
-    margin-top: 78px;
+.greet p {
+  font-size: 24px;
+  opacity: 0.75;
+  margin-top: 78px;
 }
 
 .connect {
-    display: flex;
-    gap: 16px; 
-    margin: 40px 0 32px;
+  display: flex;
+  gap: 16px;
+  margin: 40px 0 32px;
 }
 
 .connect button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #5D8AA8;
-    color: #ffffff;
-    padding: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    gap: 8px;
-    transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #5d8aa8;
+  color: #ffffff;
+  padding: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  gap: 8px;
+  transition: transform 0.3s ease;
 }
 
 .connect button svg {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .connect button:hover {
-    transform: scale(1.05);
-  }
+  transform: scale(1.05);
+}
 
+.connect a{
+    text-decoration: none;
+}
 
 @media (max-width: 768px) {
-    .heading{
-        margin-top: 96px;
-    }
-
-    .heading h1{
-        font-size: 54px;
-        line-height: 64px;
-        text-align: center;
-        margin-top: 0;
-    }
-
-    .heading p{
-        font-size: 24px;
-        text-align: center;
-    }
-
-    .greet p{
-        font-size: 16px;
-        text-align: center;
-        line-height: 36px;
-        margin-top: 64px;
-    }
-
-    .connect {
-        flex-direction: row; 
-        gap: 24px; 
-        justify-content: center;
-        margin-top: 64px;
-      }
-    
-      .connect button {
-        text-align: center; 
-        padding: 12px;
-      }
+  .heading {
+    margin-top: 96px;
   }
+
+  .heading h1 {
+    font-size: 54px;
+    line-height: 64px;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .heading p {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .greet p {
+    font-size: 14px;
+    text-align: center;
+    line-height: 36px;
+    margin-top: 64px;
+  }
+
+  .connect {
+    flex-direction: row;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 64px;
+  }
+
+  .connect button {
+    text-align: center;
+    padding: 12px;
+  }
+}

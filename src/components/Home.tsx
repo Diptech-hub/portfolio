@@ -49,7 +49,7 @@ const Home: React.FC = () => {
           transition={{ delay: 0.5, duration: 0.8, ease: "easeInOut" }}
         >
           <p>
-            Hey, Good {time}, Happy {day} 😉
+            Hey, Good {time}, Happy {day} 😉... I'm
           </p>
         </motion.div>
         <motion.h1
@@ -78,9 +78,11 @@ const Home: React.FC = () => {
               Explore <PiArrowCircleUpRight />
             </button>
           </Link>
-          <button>
-            Let's talk <PiArrowCircleUpRight />
-          </button>
+          <a href="mailto:oladipupobabayemi@gmail.com">
+            <button>
+              Let's talk <PiArrowCircleUpRight />
+            </button>
+          </a>
         </motion.div>
       </motion.div>
     </>
