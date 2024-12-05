@@ -3,14 +3,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  line-height: 16px;
+  line-height: 8px;
   height: 100%;
 }
 
 .heading h1 {
   font-size: 72px;
   font-weight: bolder;
-  margin-top: 48px;
+  margin-top: 32px;
 }
 
 .heading p {
@@ -20,13 +20,13 @@
 .greet p {
   font-size: 24px;
   opacity: 0.75;
-  margin-top: 78px;
+  margin-top: 64px;
 }
 
 .connect {
   display: flex;
   gap: 16px;
-  margin: 40px 0 32px;
+  margin: 24px 0 32px;
 }
 
 .connect button {
@@ -69,7 +69,7 @@
     font-size: 54px;
     line-height: 64px;
     text-align: center;
-    margin-top: 0;
+    margin: 8px 0;
   }
 
   .heading p {

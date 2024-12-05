@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { motion } from "framer-motion"; // Import Framer Motion
+import { motion } from "framer-motion"; 
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
 import "../style/header.css";
@@ -46,7 +46,7 @@ const Header: React.FC = () => {
           About
         </Link>
         <Link to="/project" className="headLink">
-          Projects
+          Projects 
         </Link>
         <a
           href="https://docs.google.com/document/d/1kY6S1ati8_IheuajOWiQziSXaa2oL9sOm_plGQtBStA/edit?usp=sharing"
@@ -82,7 +82,7 @@ const Header: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Resume
+              Resume 
             </a>
           </motion.div>
         )}
