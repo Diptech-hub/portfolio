@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import About from "./components/About";
 import Project from "./components/Projects";
 import Preloader from "./components/preLoader";
+import Contact from "./components/contact";
 import { AnimatePresence } from "framer-motion";
 import "./App.css";
 
@@ -38,6 +39,7 @@ const App: React.FC = () => {
               <Route index element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/project" element={<Project />} />
+              <Route path="/contact" element={<Contact />} />
             </Routes>
           </AnimatePresence>
           <Footer />
