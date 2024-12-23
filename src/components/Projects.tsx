@@ -37,7 +37,7 @@ const projects: ProjectList[] = [
     id: 3,
     name: "Socials",
     str1: "A web platform designed to fetch X public metrics and display it in a graphical way",
-    str2: "REACTJS + TYPESCRIPT + TailwindCSS + ChartJS",
+    str2: "NEXTJS + TYPESCRIPT + TailwindCSS + ChartJS",
     link1: "https://github.com/Diptech-hub/socials/",
     link2: "https://github.com/Diptech-hub/socials/",
   },
