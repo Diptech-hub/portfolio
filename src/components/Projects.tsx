@@ -132,7 +132,7 @@ const Project: React.FC = () => {
           </ul>
         </motion.div>
         <motion.a
-          href="https://github.com/Diptech-hub"
+          href="https://github.com/Diptech-hub?tab=repositories"
           target="_blank"
           rel="noopener noreferrer"
           className="others"
