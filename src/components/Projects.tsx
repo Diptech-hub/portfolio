@@ -39,7 +39,7 @@ const projects: ProjectList[] = [
     str1: "A web platform designed to fetch X public metrics and display it in a graphical way",
     str2: "NEXTJS + TYPESCRIPT + TailwindCSS + ChartJS",
     link1: "https://github.com/Diptech-hub/socials/",
-    link2: "https://github.com/Diptech-hub/socials/",
+    link2: "https://dip-social.netlify.app/",
   },
   {
     id: 4,
@@ -113,7 +113,7 @@ const Project: React.FC = () => {
                   whileHover={{ scale: 1.1, color: "#5D8AA8" }}
                 >
                   <LuCode2 />
-                  See code
+                  Code
                 </motion.a>
                 {project.link2 && (
                   <motion.a
@@ -123,7 +123,7 @@ const Project: React.FC = () => {
                     whileHover={{ scale: 1.1, color: "#5D8AA8" }}
                   >
                     <FaEye />
-                    See live
+                    Live
                   </motion.a>
                 )}
               </div>
@@ -132,7 +132,7 @@ const Project: React.FC = () => {
           </ul>
         </motion.div>
         <motion.a
-          href="github.com/Diptech-hub/"
+          href="https://github.com/Diptech-hub"
           target="_blank"
           rel="noopener noreferrer"
           className="others"
