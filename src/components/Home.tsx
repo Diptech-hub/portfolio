@@ -64,8 +64,9 @@ const Home: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.9, duration: 0.8, ease: "easeInOut" }}
+          className="details"
         >
-          A Front-End Developer
+          A Front-End Developer building scalable and interactive experiences...
         </motion.p>
 
         <motion.div

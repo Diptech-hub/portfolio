@@ -91,6 +91,10 @@
     margin-top: 36px;
   }
 
+  .details{
+    line-height: 36px;
+  }
+
   .connect button {
     text-align: center;
     padding: 12px;
