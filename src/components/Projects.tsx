@@ -119,7 +119,20 @@ const Project: React.FC = () => {
                   visible: { opacity: 1, y: 0 },
                 }}
               >
-                <img src={project.image} alt={project.alt} loading="lazy" />
+                <motion.img
+                  src={project.image}
+                  alt={project.alt}
+                  loading="lazy"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                  whileHover={{
+                    scale: 1.1,
+                    boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                />
+
                 <div className="projectDetails">
                   <p>{project.name}</p>
                   <p>{project.str1}</p>

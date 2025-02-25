@@ -66,7 +66,7 @@ const Home: React.FC = () => {
           transition={{ delay: 0.9, duration: 0.8, ease: "easeInOut" }}
           className="details"
         >
-          A Front-End Developer building scalable and interactive experiences...
+          A Front-End Developer <span className="detailSpan"> building scalable and interactive experiences... </span>
         </motion.p>
 
         <motion.div
