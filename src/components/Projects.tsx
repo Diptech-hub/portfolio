@@ -1,5 +1,5 @@
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { Key } from "react";
 import "../style/project.css";
 import Header from "./header";
 import { FaEye } from "react-icons/fa";
@@ -10,9 +10,9 @@ import Faculte from "../assets/Faculte.png";
 import CareFinder from "../assets/CareFinder.png";
 import Socials from "../assets/Socials.png";
 import AyoWeb from "../assets/AyoWeb.png";
+import SeniorEase from "../assets/SeniorEase.png";
 
 interface ProjectList {
-  id: Key | null | undefined;
   name: string;
   str1: string;
   str2: string;
@@ -24,7 +24,15 @@ interface ProjectList {
 
 const projects: ProjectList[] = [
   {
-    id: 1,
+    name: "SeniorEase Groceries & Errands",
+    str1: "SeniorEase Grocery & Errands is a community-first web platform designed to support senior citizens in Sudbury, by offering grocery delivery and essential errand services with care and dignity. ",
+    str2: "REACTJS + TYPESCRIPT + FIREBASE + TAILWINDCSS + EMAILJS",
+    link1: "https://github.com/Diptech-hub/",
+    link2: "https://senioreasegrocery.ca/",
+    image: SeniorEase,
+    alt: "SeniorEase image",
+  },
+  {
     name: "Faculte",
     str1: "A content management system (CMS) designed to streamline the administration and presentation of educational content",
     str2: "REACTJS + TYPESCRIPT + REDUX + FIRESTORE + CSS",
@@ -34,7 +42,6 @@ const projects: ProjectList[] = [
     alt: "Faculte image",
   },
   {
-    id: 2,
     name: "CareFinder",
     str1: "A web platform designed to help users locate healthcare providers within their geographical region",
     str2: "REACTJS + TYPESCRIPT + FIRESTORE + TailwindCSS",
@@ -44,7 +51,6 @@ const projects: ProjectList[] = [
     alt: "CareFinder image",
   },
   {
-    id: 3,
     name: "Socials",
     str1: "A web platform designed to fetch X public metrics and display it in a graphical way",
     str2: "NEXTJS + TYPESCRIPT + TailwindCSS + ChartJS",
@@ -54,7 +60,6 @@ const projects: ProjectList[] = [
     alt: "Socials image",
   },
   {
-    id: 4,
     name: "AyoWeb",
     str1: "A UI/UX Designers portfolio",
     str2: "REACTJS + CSS + FRAMER-MOTION",
@@ -66,6 +71,36 @@ const projects: ProjectList[] = [
 ];
 
 const Project: React.FC = () => {
+  const [visibleCount, setVisibleCount] = useState(4);
+  const [loading, setLoading] = useState(false);
+  const observerRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const target = entries[0];
+        if (target.isIntersecting && visibleCount < projects.length) {
+          setLoading(true);
+          setTimeout(() => {
+            setVisibleCount((prev) => prev + 4);
+            setLoading(false);
+          }, 1000);
+        }
+      },
+      { threshold: 1 }
+    );
+
+    const currentTarget = observerRef.current; // ✅ capture once
+
+    if (currentTarget) {
+      observer.observe(currentTarget);
+    }
+
+    return () => {
+      if (currentTarget) observer.unobserve(currentTarget);
+    };
+  }, [visibleCount]);
+
   return (
     <div>
       <Header />
@@ -89,50 +124,15 @@ const Project: React.FC = () => {
         >
           Some notable projects I've built include:
         </motion.p>
-        <motion.div
-          className="projectList"
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: { opacity: 0, y: 20 },
-            visible: {
-              opacity: 1,
-              y: 0,
-              transition: {
-                delayChildren: 0.6,
-                staggerChildren: 0.3,
-              },
-            },
-          }}
-        >
+        <motion.div className="projectList">
           <ul>
-            {projects.map((project) => (
-              <motion.li
-                key={project.id}
-                whileHover={{
-                  translateY: -10,
-                  boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)",
-                }}
-                whileTap={{ scale: 0.98 }}
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-              >
+            {projects.slice(0, visibleCount).map((project) => (
+              <motion.li key={project.name}>
                 <motion.img
                   src={project.image}
                   alt={project.alt}
                   loading="lazy"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, ease: "easeOut" }}
-                  whileHover={{
-                    scale: 1.1,
-                    boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
-                  }}
-                  whileTap={{ scale: 0.95 }}
                 />
-
                 <div className="projectDetails">
                   <p>{project.name}</p>
                   <p>{project.str1}</p>
@@ -142,20 +142,16 @@ const Project: React.FC = () => {
                       href={project.link1}
                       target="_blank"
                       rel="noopener noreferrer"
-                      whileHover={{ scale: 1.1, color: "#5D8AA8" }}
                     >
-                      <LuCode2 />
-                      Code
+                      <LuCode2 /> Code
                     </motion.a>
                     {project.link2 && (
                       <motion.a
                         href={project.link2}
                         target="_blank"
                         rel="noopener noreferrer"
-                        whileHover={{ scale: 1.1, color: "#5D8AA8" }}
                       >
-                        <FaEye />
-                        Live
+                        <FaEye /> Live
                       </motion.a>
                     )}
                   </div>
@@ -163,15 +159,18 @@ const Project: React.FC = () => {
               </motion.li>
             ))}
           </ul>
+          {loading && (
+            <div className="spinnerContainer">
+              <div className="spinner" />
+            </div>
+          )}
+          <div ref={observerRef} />
         </motion.div>
         <motion.a
           href="https://github.com/Diptech-hub?tab=repositories"
           target="_blank"
           rel="noopener noreferrer"
           className="others"
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1 }}
           whileHover={{ scale: 1.1, color: "#5D8AA8" }}
         >
           Others <MdOutlineArrowOutward />

@@ -52,7 +52,7 @@ const Header: React.FC = () => {
           Contact
         </Link>
         <a
-          href="https://drive.google.com/file/d/1duimmwApMCRvhTTWabZlfGunBcjYIYju/view?usp=drive_link"
+          href="https://drive.google.com/file/d/1eyubwlLySyoiF0t9TDIzGyPiWVWPAdHw/view?usp=drive_link"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -84,7 +84,7 @@ const Header: React.FC = () => {
               Contact
             </Link>
             <a
-              href="https://drive.google.com/file/d/1duimmwApMCRvhTTWabZlfGunBcjYIYju/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1eyubwlLySyoiF0t9TDIzGyPiWVWPAdHw/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
             >
