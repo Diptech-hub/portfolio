@@ -50,7 +50,7 @@ const Home: React.FC = () => {
           transition={{ delay: 0.5, duration: 0.8, ease: "easeInOut" }}
         >
           <p>
-            Good {time}, Happy {day} 😉... I'm
+            Good {time}, Happy {day} 😉...
           </p>
         </motion.div>
         <motion.h1

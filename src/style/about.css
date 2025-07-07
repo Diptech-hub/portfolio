@@ -9,12 +9,13 @@
 
 .about p {
   font-size: 16px;
-  opacity: 0.75;
-  text-align: justify;
+  line-height: 24px;
+  color: lightgray;
 }
 
 .about p span {
   font-weight: bold;
+  color: white;
 }
 
 .tools {
@@ -25,6 +26,10 @@
 .tools p {
   font-size: 16px;
   margin-bottom: 16px;
+}
+
+.toolshead{
+  text-align: left;
 }
 
 .toolicon {
@@ -46,7 +51,7 @@
 }
 
 .toolicon div:hover {
-  color: #1a73e8; /* Change icon color on hover */
+  color: #1a73e8; 
 }
 
 @media (max-width: 768px) {
@@ -59,11 +64,11 @@
   }
 
   .about p {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .tools p {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .toolicon {

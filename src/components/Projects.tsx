@@ -10,7 +10,7 @@ import Faculte from "../assets/Faculte.png";
 import CareFinder from "../assets/CareFinder.png";
 import Socials from "../assets/Socials.png";
 import AyoWeb from "../assets/AyoWeb.png";
-import SeniorEase from "../assets/SeniorEase.png";
+import SeniorEase from "../assets/SeniorEase.webp";
 
 interface ProjectList {
   name: string;

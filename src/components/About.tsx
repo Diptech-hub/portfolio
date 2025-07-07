@@ -71,7 +71,7 @@ const About: React.FC = () => {
           through reading and podcasts.
         </motion.p>
         <motion.div className="tools" variants={containerVariants}>
-          <motion.p variants={itemVariants}>
+          <motion.p className="toolshead" variants={itemVariants}>
             Here are some of the tools I've worked with over the years ...
           </motion.p>
           <motion.div className="toolicon" variants={containerVariants}>
