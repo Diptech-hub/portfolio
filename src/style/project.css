@@ -194,11 +194,11 @@
 
 @media (max-width: 480px) {
   .project h1 {
-    font-size: 20px;
+    font-size: 28px;
   }
 
   .project p {
-    font-size: 12px;
+    font-size: 16px;
     text-align: left;
   }
 
@@ -208,11 +208,11 @@
   }
 
   .projectList li p:first-child {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .projectlink a {
-    font-size: 12px;
+    font-size: 14px;
     gap: 6px;
   }
 
@@ -222,6 +222,6 @@
   }
 
   .others svg {
-    font-size: 20px;
+    font-size: 24px;
   }
 }

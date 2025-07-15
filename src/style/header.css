@@ -87,11 +87,11 @@ a:hover {
   }
 
   .mobilebody a {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 24px;
+    font-weight: bolder;
     color: white;
     text-decoration: none;
-    margin: 15px 0;
+    margin: 30px 0;
     transition: color 0.3s ease-in-out;
   }
 

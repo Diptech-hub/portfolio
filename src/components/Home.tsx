@@ -50,7 +50,7 @@ const Home: React.FC = () => {
           transition={{ delay: 0.5, duration: 0.8, ease: "easeInOut" }}
         >
           <p>
-            Good {time}, Happy {day} 😉...
+            Good {time}, and Happy {day} 😉
           </p>
         </motion.div>
         <motion.h1
@@ -58,7 +58,7 @@ const Home: React.FC = () => {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.7, duration: 0.8, ease: "easeInOut" }}
         >
-          Oladipupo Babayemi
+          I'm Oladipupo Babayemi
         </motion.h1>
         <motion.p
           initial={{ opacity: 0 }}
@@ -66,7 +66,12 @@ const Home: React.FC = () => {
           transition={{ delay: 0.9, duration: 0.8, ease: "easeInOut" }}
           className="details"
         >
-          A Front-End Developer <span className="detailSpan"> building scalable and interactive experiences... </span>
+          A Front-End Developer{" "}
+          <span className="detailSpan">
+            {" "}
+            who builds scalable and thoughtful products, engineered to elevate
+            user experiences and drive real business growth.
+          </span>
         </motion.p>
 
         <motion.div

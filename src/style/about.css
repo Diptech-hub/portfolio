@@ -8,9 +8,10 @@
 }
 
 .about p {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 1.5;
   color: lightgray;
+  opacity: 0.75;
 }
 
 .about p span {
@@ -57,22 +58,24 @@
 @media (max-width: 768px) {
   .about {
     margin: 96px 0;
+    align-items: start;
   }
 
   .about h1 {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .about p {
-    font-size: 15px;
+    font-size: 16px;
+    line-height: 1.5;
   }
 
   .tools p {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .toolicon {
-    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
     gap: 16px;
   }
 

@@ -53,14 +53,13 @@
   transform: scale(1.05);
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
   .contacthead h2 {
     font-size: 28px;
   }
 
   .contacthead p {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .contactlink {
@@ -74,18 +73,18 @@
 
 @media (max-width: 480px) {
   .contacthead h2 {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .contacthead p {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .contactlink {
-    gap: 24px;
+    gap: 48px;
   }
 
   .contactlink a {
-    font-size: 16px;
+    font-size: 18px;
   }
 }

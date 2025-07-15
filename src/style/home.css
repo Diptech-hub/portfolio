@@ -8,7 +8,7 @@
 }
 
 .heading h1 {
-  font-size: 72px;
+  font-size: 64px;
   font-weight: bolder;
   margin-top: 32px;
 }
@@ -17,10 +17,18 @@
   font-size: 24px;
 }
 
-.greet p, .detailSpan {
-  font-size: 24px;
+.greet p,
+.detailSpan {
+  font-size: 20px;
   opacity: 0.75;
   margin-top: 64px;
+}
+
+.details {
+  font-size: 20px;
+  margin-top: 5px;
+  line-height: 1.5;
+  text-align: center;
 }
 
 .connect {
@@ -63,39 +71,44 @@
   .heading {
     margin-top: 48px;
     height: auto;
+    align-items: flex-start;
   }
 
   .heading h1 {
     font-size: 54px;
-    line-height: 64px;
-    text-align: center;
-    margin: 8px 0;
+    line-height: 48px;
+    text-align: left;
+    margin: 16px 0;
   }
 
   .heading p {
     font-size: 24px;
-    text-align: center;
+    text-align: left;
+    line-height: 1.3;
   }
 
   .greet p {
-    font-size: 16px;
-    text-align: center;
-    line-height: 36px;
+    text-align: left;
+    font-size: 18px;
     margin-top: 32px;
   }
 
+  .details {
+    margin-top: 24px;
+  }
+
   .detailSpan {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .connect {
     flex-direction: row;
     gap: 24px;
-    justify-content: center;
-    margin-top: 36px;
+    justify-content: left;
+    margin-top: 16px;
   }
 
-  .details{
+  .details {
     line-height: 36px;
   }
 
