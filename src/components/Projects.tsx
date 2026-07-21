@@ -28,7 +28,7 @@ const projects: ProjectList[] = [
     str1: "SeniorEase Grocery & Errands is a community-first web platform designed to support senior citizens in Sudbury, by offering grocery delivery and essential errand services with care and dignity. ",
     str2: "REACTJS + TYPESCRIPT + FIREBASE + TAILWINDCSS + EMAILJS",
     link1: "https://github.com/Diptech-hub/",
-    link2: "https://senioreasegrocery.ca/",
+    link2: "https://senioreease.netlify.app/",
     image: SeniorEase,
     alt: "SeniorEase image",
   },
